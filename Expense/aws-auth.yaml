@@ -7,10 +7,10 @@ data:
       rolearn: arn:aws:iam::913524941205:role/eksctl-eks-cluster-nodegroup-Expen-NodeInstanceRole-q4yJ9ZOY8fye
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
-  - groups:
-    - pod-reader-for-rbac
-    userarn: arn:aws:iam::913524941205:user/for-rbac
-    username: for-rbac
+    - userarn: arn:aws:iam::913524941205:user/for-rbac
+      username: for-rbac
+      groups:
+        - pod-reader-for-rbac
 kind: ConfigMap
 metadata:
   creationTimestamp: "2024-10-12T05:29:02Z"
